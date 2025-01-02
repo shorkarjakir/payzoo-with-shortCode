@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo - shortcode</title>
+    <!-- daisi ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <main class="flex justify-center">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+              <div class="artboard artboard-demo phone-2 justify-start mt-5">
+                <!-- available balance: -->
+                <div class="stats bg-primary text-primary-content">
+                    <div class="stat">
+                      <div class="stat-title">Account balance</div>
+                      <div class="stat-value">$<span id="account-balance">1999</span></div>
+                      
+                    </div>
+                  
+                    <div class="stat">
+                      <div class="stat-actions pr-1 pl-2">
+                        <button id="Withdrawal-btn" class="btn btn-sm">Withdrawal</button> <br>
+                        <button id="Deposit-btn" class="btn btn-sm mt-2">Deposit</button>
+                        <button id="Transactions-btn" class="btn btn-sm">Transactions</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- end available balance -->
+                 <!-- Deposit Form -->
+                 <div id="Deposit-form" class="hero bg-base-200">
+                  <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                      <form class="card-body">
+                        <div>
+                          <h2 class="text-2xl text-teal-500 font-bold">Deposit Form:</h2>
+                        </div>
+                        <div class="form-control">
+                          <label class="label">
+                            <span class="label-text">Depost Amount:</span>
+                          </label>
+                          <input id="Deposit-amout" type="text" placeholder="Amount" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control">
+                          <label class="label">
+                            <span class="label-text">Pin</span>
+                          </label>
+                          <input id="Deposit-pin" type="password" placeholder="Pin" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control mt-6">
+                          <button id="Depost-btn" class="btn btn-primary">Deposit Now</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Deposit Form -->
+                <!-- Withdrawal Form -->
+                <div id="Withdrawal-form" class="hero hidden bg-base-200">
+                  <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                      <form class="card-body">
+                        <div>
+                          <h2 class="text-2xl text-red-600 font-bold">Withdrawal Form:</h2>
+                        </div>
+                        <div class="form-control">
+                          <label class="label">
+                            <span class="label-text">Withdrawal Amount:</span>
+                          </label>
+                          <input id="Withdrawal-amount" type="text" placeholder="Amount" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control">
+                          <label class="label">
+                            <span class="label-text">Pin</span>
+                          </label>
+                          <input id="Withdrawal-pin" type="password" placeholder="Pin" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control mt-6">
+                          <button id="Withdrawal-btn-form" class="btn btn-primary">Withdrawal Now</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Withdrawal Form -->
+                 <!-- Transaction History -->
+                  <div id="Transaction-history-form" class="mt-4 hidden">
+                    <h2 class="text-3xl text-fuchsia-600 font-bold">Transaction History</h2>
+                    <div id="Transaction-data" class="mt-2 text-green-400">
+  
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </main>
+    <script src="./js/calculate.js"></script>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/feature.js"></script>
+</body>
+</html>
